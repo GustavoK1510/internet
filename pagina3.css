@@ -1,0 +1,12 @@
+/** seletor{ propriedade:valor;}**/
+p{
+    background-color: azure;
+}
+
+#tituloformascss{
+    background-color: beige;
+}
+
+.vermelho{
+    color:red;
+}
