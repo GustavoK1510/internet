@@ -8,7 +8,7 @@
         img{
             width: 200px;
             border:1px solid #000;
-            border-radius: 50%;
+            border-radius: 10%;
             box-shadow: 0 0 10px red;
         }
         img:hover{
@@ -38,7 +38,7 @@
     <p>Este é um parágrafo de exemplo na Página 2.</p>
     <p>Este é outro parágrafo de exemplo na Página 2.</p>
     <span>Meu span</span><span>Este é outro texto dentro de um span.</span>
-    <p>Meu parágrafo com queba de linha <br> aqui. con a tag &lt;br&gt;.</p>
+    <p>Meu parágrafo com quebra de linha <br> aqui. con a tag &lt;br&gt;.</p>
     <div>
         <h2>Tag de formatação de texto</h2>
         <p>Este é um texto <strong>em negrito</strong> e este é um texto <em>em itálico</em>.
@@ -142,26 +142,35 @@
 
     <div>
         <h2>Formulários</h2>
-        <label for="nomeusuario">Nome</label>
-        <input id ="nomeusuario" type="text" placeholder="Digite seu nome">
-        <br>
-        <label for="cor">Cor</label>
-        <input id="cor" type="color" placeholder="Escolha uma cor">
-        <br>
-        <label for="dtnasc">Data de Nascimento</label>
-        <input id="dtnasc" type="datetime" placeholder="Digite sua data de nascimento">
-        <br>
-        <label for="email">Email</label>
-        <input id="email"type="email" placeholder="Digite seu email">
-        <br>
-        <label for="endereco">Endereço</label>
-        <input id="endereco" type="text" placeholder="Digite seu endereço">
-        <br>
-        <label for="obs">Observação</label>
-        <input id="obs" type="text" placeholder="Digite observações aqui">
-        <br>
-        <label for="botao">Botão</label>
-        <input id="botao" type="button">
+        <form action="">
+            <label for="nomeusuario">Nome</label>
+            <input id ="nomeusuario" type="text" placeholder="Digite seu nome">
+            <br>
+            <label for="cor">Cor</label>
+            <input id="cor" type="color" placeholder="Escolha uma cor">
+            <br>
+            <label for="dtnasc">Data de Nascimento</label>
+            <input id="dtnasc" type="datetime" placeholder="Digite sua data de nascimento">
+            <br>
+            <label for="email">Email</label>
+            <input id="email"type="email" placeholder="Digite seu email">
+            <br>
+            <label for="endereco">Endereço</label>
+            <input id="endereco" type="text" placeholder="Digite seu endereço">
+            <br>
+            <label for="obs">Observação</label>
+            <textarea type="text" id="obs"></textarea>
+            <br>
+            <button>Enviar</button>
+        </form>
+
+        <form action="https://google.com/search" method="post">
+            <h2>Busca</h2>
+            <label for="key">Entre com termo</label>
+            <input id="key" type="text" name="q">
+            <button>Buscar</button>
+        </form>    
+
     </div>
 
 </body>
