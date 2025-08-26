@@ -15,3 +15,8 @@ p{
     background-color:blueviolet;
     color:floralwhite;
 }
+#botao:hover{
+    background-color: magenta;
+    color: white;
+    font-size: 12pt;
+}
