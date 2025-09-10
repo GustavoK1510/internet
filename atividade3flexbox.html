@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de Usuários</title>
+</head>
+<style>
+    html, body {
+    background-color: gray;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#container {
+    width: 1000px;
+    height: 540px;
+    background-color: white;
+}
+
+
+.perfil {
+    display: flex;
+}
+
+
+.perfil div {
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+</style>
+<body>
+    <div id="container">
+        <div class="perfil">
+            <img src="./assets/robertpattinson.jpg" alt="">
+            <div>
+                <h1>Linda Hart</h1>
+                <p>6765 Shady Ln Dr</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <img src="./assets/lebron.jpg" alt="">
+            <div>
+                <h1>Roger Medina</h1>
+                <p>2420 Paddock Way</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <img src="./assets/robertdowney.jpg" alt="">
+            <div>
+                <h1>Dean Sullivan</h1>
+                <p>6727 Airplane Ave</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <img src="./assets/cillian.jpg" alt="">
+             <div>
+                <h1>Elizabeth Austin</h1>
+                <p>6685 Blossom Hill Rd</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

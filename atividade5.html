@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    height: 100%;
+}
+
+#esquerda {
+    background-color: darkslategray;
+    color: white;
+    padding-left: 20px;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+   
+}
+
+#direita {
+    padding-left: 20px;
+}
+
+#imagem {
+    padding-top: 30px;
+    padding-right: 20px;
+    width: 300px;
+    height: 200px;
+}
+
+.divs {
+    padding-top: 10px;
+    margin: 0;
+}
+
+.divs h4, .divs p {
+    margin: 4px 0;
+}
+
+.ano {
+    display: flex;
+}
+
+.ano p {
+    margin-left: auto;
+    padding-right: 30px;
+}
+</style>
 <body>
     <div id="container">
         <div id="esquerda">
-            <img id="imagem" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7qgunE3flsRMp7DICgM5xTVURS37JEf07WZwmn8tdRID7mFhEX_j-UwtJE7uCnOxF6YUBG_4Wkh_kg7qQckbeEWS-hTbCoXT52d3ORqFo" alt="FOTO CURRÍCULO">
+            <img id="imagem" src="./assets/homem.jpg" alt="FOTO CURRÍCULO">
             <h3>Pessoal</h3>
             <hr>
             <div class="divs">
