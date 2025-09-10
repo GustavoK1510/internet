@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 4 FlexBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     .container{
@@ -16,15 +17,81 @@
         width: 50px;
         height: 300px;
         border-radius: 80px;
+        margin: 5px;
+        position: relative;
+
+    }
+
+    .icone{
+        position: absolute;
+        bottom: 10px;
+        left: 9px;
+        border: 1px solid black;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto{
+        position:absolute;
+        bottom: 10px;
+        right: 8px;
+        opacity: 0px;
+        visibility: hidden;
+        margin-left: 8px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: white;
+    }
+
+    #item1{
+        background-image: url(assets/moto.jpg);
+        background-size: cover;
+    }
+
+    #item2{
+        background-image: url(assets/carro.jpg);
+        background-size: cover;
+    }
+
+    #item3{
+        background-image: url(assets/caminhonete.jpg);
+        background-size: cover;
+    }
+
+    #item4{
+        background-image: url(assets/helicoptero.jpg);
+        background-size: cover;
+    }
+
+    #item5{
+        background-image: url(assets/lancha.jpg);
+        background-size: cover;
+    }
+
+    .box:hover{
+        .icone{
+            bottom: 10px;
+            left: 7px;
+        }
+        .texto{
+            opacity: 1;
+            visibility: visible;
+        }
+        width: 400px;
+        border-radius: 30px;
     }
 </style>
 <body>
     <div class="container">
-        <div class="box" id="item1"></div>
-        <div class="box" id="item2"></div>
-        <div class="box" id="item3"></div>
-        <div class="box" id="item4"></div>
-        <div class="box" id="item5"></div>
+        <div class="box" id="item1"> <div class="icone" id="icone1"> <i class="fas fa-motorcycle"></i></div> <strong class="texto">Moto</strong></div>
+        <div class="box" id="item2"> <div class="icone" id="icone2"> <i class="fas fa-car"></i></div> <strong class="texto">Carro</strong></div>
+        <div class="box" id="item3"> <div class="icone" id="icone3"> <i class="fas fa-truck-pickup"></i></div> <strong class="texto">Caminhonete</strong></div>
+        <div class="box" id="item4"> <div class="icone" id="icone4"> <i class="fas fa-helicopter"></i></div> <strong class="texto">Helicóptero</strong></div>
+        <div class="box" id="item5"> <div class="icone" id="icone5"> <i class="fas fa-ship"></i></div> <strong class="texto">Lancha</strong></div>
     </div>
 </body>
 </html>
