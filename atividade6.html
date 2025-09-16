@@ -3,13 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 6</title>
+    <title>Animação do Barquinho no Mar</title>
+  <style>
+    /* Corpo da página */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
 
-    <style>
-        
-    </style>
+    }
+    .ceu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #eaebee, #0babdb);
+      z-index: 1;
+    }
+    /* O mar */
+    .mar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, #0061a8, #003b5c);
+      z-index: 1;
+    }
+    .barquinho {
+    
+      position: absolute;
+      bottom: 40px;
+
+      width: 200px;
+      height: 240px;
+      background-image: url('https://cdn.creazilla.com/cliparts/71254/sailboat-clipart-lg.png');
+      background-size: contain;
+   
+      transform-origin: bottom center;
+      z-index: 2;
+      animation: balanco 10s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      transform: scaleX(50%);
+    }
+
+    @keyframes balanco {
+    
+      0% {
+        left: -200px;
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(5deg);
+      }
+      50%{
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(deg);
+        left: 100%;
+      }
+    }
+
+
+    .nuvem {
+      position: absolute;
+      top: 10%;
+      left: -200px;
+      width: 200px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      z-index: 3;
+      animation: moverNuvem 10s linear infinite;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes moverNuvem {
+      0% {
+        left: -200px;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+<div class="ceu"></div>
+
+  <div class="mar"></div>
+
+
+  <div class="barquinho"></div>
+
+  <div class="nuvem"></div>
+
 </body>
 </html>
