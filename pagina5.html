@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 5</title>
+</head>
+<body>
+    
+
+    <script>
+        //alert("Olá mundo!")
+        /**
+        var i = 0
+        console.log(i)
+        console.log(typeof(i))
+        i = "Gustavo"
+        console.log(i)
+        console.log(typeof(i))
+        document.body.style.backgroundColor="lightgray"
+        **/
+
+        var botao = document.createElement("button")
+        var texto = document.createElement("p")
+        botao.innerText = "Clique em mim"
+
+        document.body.appendChild(texto)
+        document.body.appendChild(botao)
+
+        document.body.style.height = "100vh"
+        document.body.style.display = "flex"
+        document.body.style.justifyContent = "center"
+        document.body.style.alignItems = "center"
+
+        var i = 0
+
+        botao.addEventListener("click", ()=>{
+            i++
+            texto.innerText = i
+        })
+    </script>
+</body>
+</html>
