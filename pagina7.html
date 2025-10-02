@@ -1,11 +1,291 @@
+1-R:Ao clicar enter o computador utiliza o método DNS que tenta tansformar a url em IP,
+após isso ele utiliza o TCP para estabelecer a conexão servidor-cliente,
+só aí ele utiliza o método HTTP que faz a requisição da informação para o servidor e 
+envia para o computador assim mostrando o conteúdo do site.
+
+2-R:B
+
+3-R:C
+
+4-R:C
+
+5-R:C
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 7</title>
+    <title>Questao 6</title>
+    <style>
+        body{
+            display: grid;
+            height:100%;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+        .japao{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-color: black;
+            border-width: 1px;
+        }
+        .bola{
+            background-color: red;
+            height:150px;
+            width: 150px;
+      
+            border-radius: 200px;
+
+        }
+        .Holanda{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .cor1{
+         background-color: brown;
+        }
+        .cor2{
+            background-color: white;
+        }
+        .cor3{
+         background-color: darkblue;
+        }
+        .cores1{
+            background-color: green;
+        }
+        .Italia{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
 </head>
 <body>
-     
+   
+    <div class="japao"><div class="bola"></div></div>
+    
+    <div class="Holanda"><div class="cor1"></div>
+    <div class="cor2"></div>
+    <div class="cor3"></div></div>
+     <div class="Italia"><div class="cores1"></div>
+     <div class="cor2"></div>
+     <div class="cor1"></div></div>
+</body>
+</html>
+
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  body{
+        position: relative;
+            height:100vh;
+            width: 100%;
+            animation: transform 2s ease-in-out;
+        }
+body:hover{
+    rotate: 180deg;
+}
+.bola1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: red;
+
+}
+.bola2{
+    position: absolute;
+    right:0;
+    top:0;
+        height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: blue;
+
+}
+.bola3{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: yellow;
+
+}
+.bola4{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+        height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: green;
+}
+.bola5{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+        height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: coral;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 7</title>
+    <link rel="stylesheet" href="Questao7.css">
+</head>
+<body>
+    <div class="bola1"></div>
+    <div class="bola2"></div>
+    <div class="bola3"></div>
+    <div class="bola4"></div>
+    <div class="bola5"></div>
+</body>
+</html>
+
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    
+}
+
+.container1 {
+    padding: 10px;
+}
+h1{
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 18px;
+    }
+    .container1 {
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: yellow;
+    }
+    .content{
+        display: grid;
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+      .container2 {
+    margin:5px;
+       background-color: green;
+    }
+      .container3 {
+         margin:5px;
+        background-color: red;
+    }
+      .container4 { 
+           margin:5px;
+        background-color: dodgerblue;
+    }
+    .container5{
+           margin:5px;
+        background-color: green;
+    }
+    .container6{
+           margin:5px;
+        background-color: yellow;
+    }
+    .container7{
+           margin:5px;
+        background-color: dodgerblue;
+    }
+
+}
+
+
+@media screen and (min-width: 500px) {
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 20px;
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+    .container1 {
+        margin:5px;
+       background-color: yellow;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .content{
+          display: grid;
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+      .container2 {
+    margin:5px;
+       background-color: green;
+    }
+      .container3 {
+         margin:5px;
+        background-color: red;
+    }
+      .container4 { 
+           margin:5px;
+        background-color: dodgerblue;
+    }
+    .container5{
+           margin:5px;
+        background-color: green;
+    }
+    .container6{
+           margin:5px;
+        background-color: yellow;
+    }
+    .container7{
+           margin:5px;
+        background-color: dodgerblue;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Questao8.css">
+    <title>Questao 4</title>
+</head>
+<body>
+    <div class="container1"><h1>HEADER</h1></div>
+    <div class="main">
+     <div class="container2"><h1>LEFT ASIDE</h1></div>
+     <div class="content">
+    <div class="container3"><h1>BANNER</h1></div>
+    <div class="container4"><h1>MAIN CONTENT</h1></div>
+    <div class="container5"><h1>LOW CONTENT</h1></div>
+     </div>
+        <div class="container6"><h1>RIGHT ASIDE</h1></div>
+    </div>
+     <div class="container7"><h1>FOOTER</h1></div>
+ 
 </body>
 </html>
