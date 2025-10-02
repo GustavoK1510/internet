@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+        #franca{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            right: 0;
+            top: 0;
+            height:250px;
+            width: 450px;
+            border: 1px solid black;
+            margin: 0;
+        }
+        .azulfranca{
+            height: 100%;
+            width: 150px;
+            background-color: blue;
+        }
+        .brancofranca{
+            height: 100%;
+            width: 150px;
+        }
+        .vermelhofranca{
+            height: 100%;
+            width: 150px;
+            background-color: red;
+        }
+
+        #alemanha{
+            position: absolute;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            left: 0;
+            top: 0;
+            height:250px;
+            width: 450px;
+            border: 1px solid black;
+            margin: 0;
+        }
+        .pretoalemanha{
+            width: 100%;
+            background-color: black;
+        }
+        .vermelhoalemanha{
+            width: 100%;
+            background-color: red;
+        }
+        .amareloalemanha{
+            width: 100%;
+            background-color: yellow;
+        }
+
+        #japao{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height:250px;
+            width: 450px;
+            border: 1px solid black;
+            margin: 0;
+        }
+        .bolajapao{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+        }
+        
+        #brasil{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height:250px;
+            width: 450px;
+            border: 1px solid black;
+            margin: 0;
+            background-color: green;
+        }
+        .amarelobrasil{
+            background-color: yellow;
+            height: 100%;
+            width: 100%;
+            border-radius: 300%;
+        }
+        .bolabrasil{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+        }
+        .brancobrasil{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: white;
+            height: 10px;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="franca">
+        <div class="azulfranca"></div>
+        <div class="brancofranca"></div>
+        <div class="vermelhofranca"></div>
+    </div>
+    <div id="alemanha">
+        <div class="pretoalemanha"></div>
+        <div class="vermelhoalemanha"></div>
+        <div class="amareloalemanha"></div>
+    </div>
+    <div id="japao">
+        <div class="bolajapao"></div>
+    </div>
+    <div id="brasil">
+        <div class="amarelobrasil">
+            <div class="bolabrasil">
+                <div class="brancobrasil"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
