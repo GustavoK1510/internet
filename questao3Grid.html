@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3 Grid</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    
+}
+body{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.item1{
+   margin: 5px;
+    border-radius: 20px;
+    background-color: rgb(92, 92, 92);
+}
+.div1{
+   display:grid;
+   grid-template-columns: 2fr 1fr 1fr;
+}
+h1{
+    color: white;
+    padding-left: 10px;
+}
+.div2{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+.div3{
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+     margin: 5px;
+    border-radius: 20px;
+    background-color: rgb(92, 92, 92);
+    align-self: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows:2fr 2fr;
+}
+.item3{
+     margin: 5px;
+     padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(175, 175, 175);
+}
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="item1"><h1>A</h1></div>
+        <div class="item2"></div>
+        <div class="item1"><h1>B</h1></div>
+    </div>
+    <div class="div2">
+ <div class="item1"><h1>C</h1></div>
+        <div class="div3">
+        <div class="item3"><h1>D</h1></div>
+        <div class="item3"><h1>E</h1></div>
+        <div class="item3"><h1>F</h1></div>
+        <div class="item3"><h1>G</h1></div>
+        <div class="item3"><h1>H</h1></div>
+        <div class="item3"><h1>I</h1></div>
+    </div></div>
+    </div>
+</body>
+</html>

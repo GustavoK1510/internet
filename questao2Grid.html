@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2 Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            
+        }
+        body{
+            display: grid;
+            grid-template-rows: 1fr 5fr;
+        }
+        .div2{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        .header{
+            background-color: aqua;
+        }
+        .nav{
+            background-color: brown;
+        }
+        .item2{
+            
+            display: grid;
+            grid-template-rows: 6fr 1fr;
+        }
+        .Content{
+            background-color: blue;
+        }
+        h1{
+            
+            justify-self: center;
+        }
+        .conteudo{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+        p{
+            padding-left: 20px;
+        }
+        img{
+            padding-left: 20px;
+        }
+        .Footer{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>HEADER</h1></div>
+    <div class="div2">
+        <div class="nav"><h1>NAV</h1></div>
+    <div class="item2">
+        <div class="Content">
+            <h1>CONTENT</h1>
+            <div class="conteudo"><img src="ImagemChris.jpg" alt="Imagem"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Rerum repellendus ut, alias quia hic deleniti facere animi nobis, quidem placeat temporibus ea veritatis eum? Voluptatem ut 
+                eveniet in fugit repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at ducimus impedit quia 
+                repudiandae iste nihil aspernatur dolor exercitationem voluptas in distinctio nam voluptatem odit ratione commodi? 
+                Voluptatem, minus officiis?</p></div>
+    </div>
+    <div class="Footer"><h1>FOOTER</h1></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4 Grid</title>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    
+}
+
+.container1 {
+    padding: 10px;
+}
+h1{
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 18px;
+    }
+    .container1 {
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: yellow;
+    }
+    .content{
+        display: grid;
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+      .container2 {
+    margin:5px;
+       background-color: green;
+    }
+      .container3 {
+         margin:5px;
+        background-color: red;
+    }
+      .container4 { 
+           margin:5px;
+        background-color: dodgerblue;
+    }
+    .container5{
+           margin:5px;
+        background-color: green;
+    }
+    .container6{
+           margin:5px;
+        background-color: yellow;
+    }
+    .container7{
+           margin:5px;
+        background-color: dodgerblue;
+    }
+
+}
+
+
+@media screen and (min-width: 500px) {
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 20px;
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
+    .container1 {
+        margin:5px;
+       background-color: yellow;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .content{
+          display: grid;
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+      .container2 {
+    margin:5px;
+       background-color: green;
+    }
+      .container3 {
+         margin:5px;
+        background-color: red;
+    }
+      .container4 { 
+           margin:5px;
+        background-color: dodgerblue;
+    }
+    .container5{
+           margin:5px;
+        background-color: green;
+    }
+    .container6{
+           margin:5px;
+        background-color: yellow;
+    }
+    .container7{
+           margin:5px;
+        background-color: dodgerblue;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container1"><h1>HEADER</h1></div>
+    <div class="main">
+     <div class="container2"><h1>LEFT ASIDE</h1></div>
+     <div class="content">
+    <div class="container3"><h1>BANNER</h1></div>
+    <div class="container4"><h1>MAIN CONTENT</h1></div>
+    <div class="container5"><h1>LOW CONTENT</h1></div>
+     </div>
+        <div class="container6"><h1>RIGHT ASIDE</h1></div>
+    </div>
+     <div class="container7"><h1>FOOTER</h1></div>
+ 
+</body>
+</html>
