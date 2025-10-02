@@ -13,24 +13,31 @@
             grid-template-columns: 2fr 1fr;
         }
         #grande{
-            margin: 10px;
-            height: 1080px;
+            margin: 5px;
+            height: 1000px;
             display: grid;
             grid-template-rows: 2fr 1fr;
         }
         #a{
+            margin: 5px;
             display: grid;
             grid-template-columns: 2fr 1fr;
         }
         #aa{
+            margin: 5px;
             display: grid;
             grid-template-rows: 4fr 3fr;
         }
         #pequena{
-            margin: 10px;
-            height: 1080px;
+            margin: 5px;
+            height: 1000px;
             display: grid;
             grid-template-rows:2fr 5fr;
+        }
+        #pequenaB{
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
         }
         #div1{
             margin: 5px;
@@ -52,6 +59,46 @@
             margin: 5px;
             background-color: aliceblue;
         }
+        #div6{
+            background-color: darkolivegreen;
+        }
+        #bolas{
+            margin: 5px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        #div7{
+            border-radius: 100%;
+            height: 70px;
+            width: 70px;
+            background-color: orange;
+        }
+        #div8{
+            border-radius: 100%;
+            height: 70px;
+            width: 70px;
+            background-color: darkslateblue;
+        }
+        #div9{
+            border-radius: 100%;
+            height: 70px;
+            width: 70px;
+            background-color: darkolivegreen;
+        }
+        #div10{
+            border-radius: 100%;
+            height: 70px;
+            width: 70px;
+            background-color: mediumpurple;
+        }
+        @media screen and (max-width: 600px){
+            *{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -60,7 +107,7 @@
             <div id="aa">
             <div id="div1"></div>
             <div id="div2"></div>
-        </div>
+            </div>
             <div id="div4"></div>      
         </div>
         <div id="div3"></div>
@@ -69,13 +116,13 @@
         <div id="div5"></div>
         <div id="pequenaB">
             <div id="div6"></div>
-            <div id="div7"></div>
-            <div id="div8"></div>
-            <div id="div9"></div>
-            <div id="div10"></div>
-        </div>
-        
-        
+            <div id="bolas">
+                <div id="div7"></div>
+                <div id="div8"></div>
+                <div id="div9"></div>
+                <div id="div10"></div>
+            </div> 
+        </div>  
     </div>
     
 </body>
