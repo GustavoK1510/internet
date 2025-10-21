@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        div{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome">
+        <label for="peso">Digite seu peso:</label>
+        <input type="number" id="peso" step="0.1">
+        <label for="altura">Digite sua altura:</label>
+        <input type="number" id="altura" step="0.01">
+        
+        <p id="imc"></p>
+        <p id="classificacao"></p>
+
+        <button onclick="calculo()" >Calcular</button>
+    </div>
+    <script>
+        function calculo(){
+            let altura = parseFloat(document.getElementById("altura").value);
+            let peso = parseFloat(document.getElementById("peso").value);
+            let calculo = peso/((altura/100)*(altura/100));
+
+            if(calculo<=18.5){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Abaixo do peso"
+            }
+
+            if(calculo>18.5 && calculo<24.9){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Peso normal"
+            }
+
+            if(calculo>=24.9 && calculo<=29.9){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Sobrepeso"
+            }
+
+            if(calculo>=30 && calculo<=34.9){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Obesidade 1"
+            }
+
+            if(calculo>=35 && calculo<=39.9){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Obesidade 2"
+            }
+
+            if(calculo>=40){
+                document.getElementById("imc").innerHTML=calculo.toFixed(2);
+                document.getElementById("classificacao").innerHTML="Obesidade 3 (mórbida)"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Números</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .controls {
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        input[type="number"] {
+            padding: 8px;
+            width: 80px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #resultado {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+        #lista-sorteios {
+            list-style: none;
+            padding: 0;
+            border-top: 1px solid #ccc;
+            margin-top: 15px;
+        }
+        #lista-sorteios li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .repeticao {
+            font-weight: bold;
+            color: blue;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorteio de Números</h1>
+
+    <div class="controls">
+        <div>
+            <label for="minimo">Mínimo:</label>
+            <input type="number" id="minimo" value="1" min="0">
+        </div>
+
+        <div>
+            <label for="maximo">Máximo:</label>
+            <input type="number" id="maximo" value="100" min="1">
+        </div>
+
+        <button id="botaoSortear" onclick="sortear()" >Sortear</button>
+    </div>
+
+    <p id="resultado">Clique em "Sortear"</p>
+
+    <h2>Histórico de Sorteios</h2>
+    <ul id="lista-sorteios">
+
+    </ul>
+
+    <script>
+        let historicoSorteios = [];
+
+        function gerarInteiroAleatorio(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function sortear() {
+            const minInput = document.getElementById('minimo');
+            const maxInput = document.getElementById('maximo');
+
+            let min = parseInt(minInput.value);
+            let max = parseInt(maxInput.value);
+
+            if (isNaN(min) || isNaN(max) || min < 0 || max < 1 || min > max) {
+                document.getElementById('resultado').textContent = "ERRO: Verifique os valores Mínimo e Máximo.";
+                return; 
+            }
+
+          
+            const numeroSorteado = gerarInteiroAleatorio(min, max);
+            
+           
+            const itemExistente = historicoSorteios.find(item => item.numero === numeroSorteado);
+
+            if (itemExistente) {
+                itemExistente.count += 1;
+            } else {
+                historicoSorteios.unshift({
+                    numero: numeroSorteado,
+                    count: 1
+                });
+            }
+
+            document.getElementById('resultado').textContent = `O número sorteado é: ${numeroSorteado}`;
+            atualizarListaNaTela(numeroSorteado, itemExistente ? itemExistente.count : 1);
+        }
+
+        function atualizarListaNaTela(numero, count) {
+            const listaUL = document.getElementById('lista-sorteios');
+            let listItem;
+
+            listItem = document.createElement('li');
+            listItem.textContent = `Número ${numero} sorteado.`;
+
+            if (count > 1) {
+                const spanRepeticao = document.createElement('span');
+                spanRepeticao.className = 'repeticao';
+                spanRepeticao.textContent = `(Sorteado ${count} vezes no total!)`;
+                listItem.appendChild(spanRepeticao);
+            }
+
+            listaUL.prepend(listItem);
+        }
+    </script>
+
+</body>
+</html>
