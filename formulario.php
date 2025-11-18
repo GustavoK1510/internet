@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Formulário de Cadastro</h2>
+    <h2>Formulário de IMC</h2>
     <form action="imc.php" method="get">
         <label for="iname">Nome</label>
         <input type="text" id="iname" name="nome">
