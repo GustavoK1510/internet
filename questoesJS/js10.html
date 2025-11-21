@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+    <style>
+        #calculadora {
+            background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+            padding: 20px;
+            border-radius: 25px;
+            width: 280px;
+            box-shadow: 0 0 18px rgba(0, 255, 180, 0.2);
+            border: 1px solid rgba(0, 255, 180, 0.15);
+        }
+
+        #display {
+            width: 100%;
+            height: 70px;
+            background: #000;
+            color: #00ffdd;
+            font-size: 36px;
+            text-align: right;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+            box-shadow: inset 0 0 10px rgba(0, 255, 200, 0.15);
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            padding: 18px;
+            font-size: 22px;
+            border: none;
+            background: #1e1e1e;
+            color: #fff;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: 0.25s;
+            font-weight: 600;
+            box-shadow: 0 0 8px rgba(0, 255, 180, 0.08);
+        }
+
+        button:hover {
+            background: #222;
+            box-shadow: 0 0 12px rgba(0, 255, 180, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.92);
+        }
+
+        .op {
+            background: #00332b;
+            color: #00ffdd;
+        }
+
+        .op:hover {
+            box-shadow: 0 0 12px rgba(0, 255, 200, 0.3);
+        }
+
+        .igual {
+            background: #00665c;
+            color: white;
+            grid-row: span 2;
+            font-size: 26px;
+        }
+
+        .igual:hover {
+            box-shadow: 0 0 16px rgba(0, 255, 200, 0.4);
+        }
+
+        .ac {
+            background: #333;
+            color: #00ffdd;
+        }
+
+        .ac:hover {
+            box-shadow: 0 0 10px rgba(0, 200, 255, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="display">0</div>
+        <div class="botoes">
+            <button class="op" onclick="addOp('+')">+</button>
+            <button class="op" onclick="addOp('-')">−</button>
+            <button class="op" onclick="addOp('*')">×</button>
+            <button class="op" onclick="addOp('/')">÷</button>
+            <button onclick="addNum('7')">7</button>
+            <button onclick="addNum('8')">8</button>
+            <button onclick="addNum('9')">9</button>
+            <button class="igual" onclick="calcular()">=</button>
+            <button onclick="addNum('4')">4</button>
+            <button onclick="addNum('5')">5</button>
+            <button onclick="addNum('6')">6</button>
+            <button onclick="addNum('1')">1</button>
+            <button onclick="addNum('2')">2</button>
+            <button onclick="addNum('3')">3</button>
+            <button onclick="addNum('0')">0</button>
+            <button onclick="addNum('.')">.</button>
+            <button class="ac" onclick="limpar()">AC</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        let expressao = "";
+
+        function addNum(n) {
+            if (display.textContent === "0") display.textContent = "";
+            display.textContent += n;
+        }
+
+        function addOp(op) {
+            expressao = display.textContent + " " + op + " ";
+            display.textContent = "";
+        }
+
+        function calcular() {
+            try {
+                let resultado = eval(expressao + display.textContent);
+                display.textContent = resultado;
+            } catch {
+                display.textContent = "Erro";
+            }
+        }
+
+        function limpar() {
+            display.textContent = "0";
+            expressao = "";
+        }
+    </script>
+</body>
+</html>

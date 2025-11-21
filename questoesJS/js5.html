@@ -128,10 +128,10 @@
             listItem.textContent = `Número ${numero} sorteado.`;
 
             if (count > 1) {
-                const spanRepeticao = document.createElement('span');
-                spanRepeticao.className = 'repeticao';
-                spanRepeticao.textContent = `(Sorteado ${count} vezes no total!)`;
-                listItem.appendChild(spanRepeticao);
+                const repeticao = document.createElement('span');
+                repeticao.className = 'repeticao';
+                repeticao.textContent = `(Sorteado ${count} vezes no total!)`;
+                listItem.appendChild(repeticao);
             }
 
             listaUL.prepend(listItem);

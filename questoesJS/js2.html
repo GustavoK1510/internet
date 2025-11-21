@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h1>Tipos de Variáveis e Operadores</h1>
+    <button id="btn">Executar Script</button>
+    <h2>Tipos das Variáveis</h2>
+    <p id="string"></p>
+    <p id="numero"></p>
+    <p id="boolean"></p>
+    <p id="undefined"></p>
+    <p id="null"></p>
+    <p id="objeto"></p>
+    <p id="array"></p>
+    <h2>Operações Entre Tipos</h2>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p id="op3"></p>
+    <p id="op4"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            const texto = "Hello";
+            const numero = 42;
+            const booleano = true;
+            let indefinido;
+            const nulo = null;
+            const objeto = { nome: "Vitor", idade: 20 };
+            const array = [1, 2, 3];
+
+            document.getElementById("string").innerText = "String: " + typeof texto;
+            document.getElementById("numero").innerText = "Number: " + typeof numero;
+            document.getElementById("boolean").innerText = "Boolean: " + typeof booleano;
+            document.getElementById("undefined").innerText = "Undefined: " + typeof indefinido;
+            document.getElementById("null").innerText = "Null: " + typeof nulo;
+            document.getElementById("objeto").innerText = "Object: " + typeof objeto;
+            document.getElementById("array").innerText = "Array: " + typeof array;
+
+            const op1 = texto + numero;
+            const op2 = booleano * numero;
+            const op3 = numero + null;
+            const op4 = numero + undefined;
+
+            console.log("string + number:", op1);
+            console.log("boolean * number:", op2);
+            console.log("number + null:", op3);
+            console.log("number + undefined:", op4);
+
+            document.getElementById("op1").innerText = `"Hello" + 42 = ${op1}`;
+            document.getElementById("op2").innerText = `true * 42 = ${op2}`;
+            document.getElementById("op3").innerText = `42 + null = ${op3}`;
+            document.getElementById("op4").innerText = `42 + undefined = ${op4}`;
+        });
+    </script>
+</body>
+</html>

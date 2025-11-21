@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+</head>
+<body>
+    <input type="text" id="palavra" placeholder="Ex: radar">
+    <button onclick="verificarPalindromo()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarPalindromo() {
+            const palavra = document.getElementById("palavra").value.trim();
+            const resultado = document.getElementById("resultado");
+
+            if (palavra === "") {
+                resultado.innerHTML = "Digite uma palavra.";
+                return;
+            }
+
+            const limpa = palavra.toLowerCase().replace(/\s+/g, "");
+            const invertida = limpa.split("").reverse().join("");
+
+            if (limpa === invertida) {
+                resultado.innerHTML = `"${palavra}" é um palíndromo.`;
+            } else {
+                resultado.innerHTML = `"${palavra}" não é um palíndromo.`;
+            }
+        }
+    </script>
+</body>
+</html>
