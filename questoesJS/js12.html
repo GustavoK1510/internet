@@ -6,18 +6,19 @@
     <title>Questão 12</title>
 </head>
 <body>
-  <input type="text" id="nomeInput" placeholder="Digite seu nome">
-  <button id="salvar">Salvar</button>
-  <p id="saudacao"></p>
+  <input type="text" id="nameInput" placeholder="Digite seu nome">
+  <button id="saveButton">Salvar</button>
+  <p id="greeting"></p>
+</body>
 
   <script>
-    const input = document.getElementById("nomeInput");
-        const button = document.getElementById("salvar");
-        const saudacao = document.getElementById("saudacao");
+    const input = document.getElementById("nameInput");
+        const button = document.getElementById("saveButton");
+        const greeting = document.getElementById("greeting");
 
         const nomeSalvo = localStorage.getItem("nome");
         if (nomeSalvo) {
-            saudacao.textContent = "Olá, " + nomeSalvo + "!";
+            greeting.textContent = "Olá, " + nomeSalvo + "!";
         }
 
         button.addEventListener("click", function () {
@@ -29,7 +30,7 @@
             }
 
             localStorage.setItem("nome", nome);
-            saudacao.textContent = "Olá, " + nome + "!";
+            greeting.textContent = "Olá, " + nome + "!";
         });
   </script>
 </body>
